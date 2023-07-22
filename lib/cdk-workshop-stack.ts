@@ -14,5 +14,9 @@ export class CdkWorkshopStack extends cdk.Stack {
         handler: "handler",
       }
     );
+
+    new cdk.aws_apigateway.LambdaRestApi(this, "Endpoint", {
+      handler: hello,
+    });
   }
 }
